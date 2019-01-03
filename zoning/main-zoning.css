@@ -1,0 +1,232 @@
+*{
+    margin:0;  
+    padding:0;
+}
+
+
+/*
+* hauteur de la page pour un footer en
+*/
+body, html{
+    height:100%;
+}
+/*
+* définition des styles du corps du texte
+* - police utilisée dans la page
+* - taille de la police de la page
+* - alignement vertical : centrer
+* - centrage horizontale du texte
+* - on enlève les marge
+*/
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:12px;
+    vertical-align:middle;
+    text-align: center;
+}
+
+
+/*
+* enlève toutes les marges intérieur / extérieur des H1
+*/
+h1{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 
+* définition css de la tête de page
+* - hauteur de la zone header en px
+* - couleur de fond
+* - la hauteur minimale des lignes dans l'élément
+*/
+header{
+    height: 100px;
+    background-color: #ccff99;
+    line-height: 100px;
+}
+
+/* 
+* définition css de la tête de page
+* - hauteur de la boite header en px
+* - couleur de fond
+* - la hauteur minimale des lignes dans l'élément
+*/
+nav{
+    height: 40px;
+    background-color: #66ccff;
+    line-height: 40px;
+}
+
+/*
+* définition de la div qui contient les sections
+* - div ou les sections seront flexible
+* - met les section en colonne
+*/
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+* définition supplémentaire pour la page inscription
+* - centre la section en hauteur
+* - centre la section en largeur
+*/
+.flex-container.connexion {
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+* définition supplémentaire pour la page inscription
+* - centre la section en hauteur
+* - centre la section en largeur
+*/
+.flex-container.row {
+    flex-wrap: wrap;
+    flex-direction: unset;
+}
+
+/*
+* définition supplémentaire pour la page inscription
+* - centre la section en hauteur
+* - centre la section en largeur
+*/
+.flex-container.todolist {
+    flex-direction: unset;
+}
+
+/*
+* définition de la section
+* - fond de la zone section 
+* - marge intérieur de 5px
+*/
+section{
+    background-color: #ffcc66;
+    padding: 5px;
+}
+
+/*
+* Définition des sections page acceuil
+* - Hauteur de la zone
+* - la hauteur minimale des lignes dans l'élément
+*/
+section.acceuil {
+    height: 200px;
+    line-height: 200px;
+}
+
+/*
+* Définition de la section page inscription
+* - longueur minimum de la zone 400px
+* - sinon longueur de 50% de la page
+* - Hauteur de la zone
+* - la hauteur minimale des lignes dans l'élément
+*/
+section.connexion{
+    min-width: 400px;
+    width: 50%;
+    height: 400px;
+    line-height: 400px;
+}
+
+/*
+* Définition de la section page inscription
+* - section photo à 1/12 (implicite)
+* - et largeur minimun
+* - Hauteur de la zone
+* - la hauteur minimale des lignes dans l'élément
+*/
+section.photo{
+    flex-grow: 1;
+    min-width: 150px;
+    height: 150px;
+    line-height: 150px
+}
+
+/*
+* Définition de la section page inscription
+* - section photo à 11/12 (implicite)
+* - couleur de fond
+*/
+section.profil{
+    flex-grow: 11;
+    height: 300px;
+    line-height: 300px;
+    background-color: aquamarine;
+}
+
+/*
+* Définition de la section page inscription
+* - Hauteur de la zone
+* - la hauteur minimale des lignes dans l'élément
+*/
+section div {
+    height: 150px;
+    line-height: 150px;
+}
+
+/*
+* Définition de la section page inscription
+* - section photo à 1/12
+* - couleur de fond
+*/
+section.menu{
+    background-color: aquamarine;
+    flex-grow: 1;
+    max-width:160px;
+    height: 500px;
+    line-height: 500px;
+}
+
+/*
+* Définition de la section page inscription
+* - section photo à 11/12
+* - couleur de fond
+*/
+section.liste{
+    background-color: #ffcc66;
+    flex-grow: 11;
+    height: 500px;
+    line-height: 500px;
+}
+
+/*
+* Définition de la section page inscription
+* - couleur de fond
+* - section photo à 1/3
+* - Hauteur de la zone
+* - la hauteur minimale des lignes dans l'élément
+*/
+section.photo{
+    background-color: aquamarine;
+    flex-grow: 1;
+    height: 300px;
+    line-height: 300px;
+}
+
+/*
+* Définition de la section page inscription
+* - section a propos à 2/3
+* - Hauteur de la zone
+* - la hauteur minimale des lignes dans l'élément
+*/
+section.apropos{
+    flex-grow: 2;
+    height: 300px;
+    line-height: 300px;
+}
+
+/* 
+* définition css du pied de page
+* - hauteur de la boite header en px
+* - couleur de fond
+* - la hauteur minimale des lignes dans l'élément
+*/
+footer{
+    height: 100px;
+    background-color: #3366cc;
+    line-height: 100px;
+}
