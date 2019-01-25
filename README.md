@@ -81,9 +81,9 @@ Ajouter des notes supplémentaires sur la façon de déployer ceci sur un systè
 
 ## Construit avec
 
-* [Php](https://secure.php.net/) - The web framework used
-* [Bootstrap](https://getbootstrap.com/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Php](https://secure.php.net/) - Langage script particulièrement adapté au développement Web
+* [Bootstrap](https://getbootstrap.com/) - Bootstrap est une boîte à outils open source pour le développement avec HTML, CSS et JS.
+* [ROME](https://rometools.github.io/rome/) - Utilisé pour la génération du RSS Feeds
 
 ## Contribution
 
@@ -105,7 +105,7 @@ Voir aussi la liste des [contributors](https://github.com/freezer974/todolist/gr
 
 ## License
 
-Ce projet est sous licence MIT - voir le fichier [LICENSE.md] (LICENSE.md) pour plus de détails.
+Ce projet est sous licence MIT - voir le fichier [LICENSE.md](LICENSE.md) pour plus de détails.
 
 ## Remerciements
 
