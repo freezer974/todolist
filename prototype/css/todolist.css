@@ -1,0 +1,31 @@
+
+/* code todo list*/
+span, div.check {
+    cursor: pointer;
+}
+
+span.removeList{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+div.scrollH {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+div.scrollV {
+    overflow-y: scroll;
+    white-space: nowrap;
+    min-width: 20em;
+}
+
+.card-block {
+    min-width: 20em;
+    background-color: rgba(255,255,255, 0.3) !important;
+}
+
+a:hover, span:hover{
+    color: rgba(255,255,255, 0.5);
+}
