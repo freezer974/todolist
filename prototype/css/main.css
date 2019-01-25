@@ -62,6 +62,7 @@ a{
     background-color: transparent;
 }
 
+/* > permet de cibler l'élément de bootstrap a modifier*/
 .btn-outline-cyan:not(:disabled):not(.disabled):active, .btn-outline-cyan:not(:disabled):not(.disabled).active,
 .show > .btn-outline-cyan.dropdown-toggle {
     color: #0089B2;
