@@ -1,6 +1,6 @@
 # Projet To-do-list
 
-Suite à la formation "Coder et déployer une application web, nous sommes en train de réaliser en petit groupe, le projet d'une TO DO LIST, ici sera notre git pour centraliser le versionning de notre projet
+Suite à la formation "Coder et déployer une application web" avec l'organisme de formation simplon, nous sommes en train de réaliser en petit groupe, le projet d'une TO DO LIST, ici sera notre git pour centraliser le versionning de notre projet
 
 ## Pour commencer
 
