@@ -1,17 +1,55 @@
+// on determine le container des listes de tache pour le drag and drop
+var container_taches = $('ul.drake_taches');
+
+// on creer la variable qui va accueillir toutes les taches déplacables
+var drake_taches = dragula({
+    // on lui determine la zone de déplacement dans la class drake_taches
+    isContainer: function (el) {
+        return el.classList.contains('drake_taches');
+      }
+});
+
+
+
+// on met le dernier élément trouver du container_taches dans drake_taches
+drake_taches.containers.push(container_taches.get(0));
+
+// on determine le container des listes pour le drag and drop
+var container_listes = $('ul.drake_listes');
+
+// on creer la variable qui va accueillir toutes les taches déplacables
+var drake_listes = dragula({
+    // on lui determine la zone de déplacement dans la class drake_taches
+    isContainer: function (el) {
+        return el.classList.contains('drake_listes');
+      },
+      moves: function (el, container, handle) {
+        return handle.classList.contains('card-body');
+      }
+});
+
+// on met le dernier élément trouver du container_listes dans drake_listes
+drake_listes.containers.push(container_listes.get(0));
+
+var count=0;
+
 // on ecoute dans body le click sur la span ajouteList
 $("body").on( "click", 'span.ajouteList', function(event) {
     
     // on clone la div copy caché dans le html dans la variable copy
-    var copy = $('div.d-none').clone();
+    var copy = $('.card-deck>div.d-none').clone();
     
     // on ajout les class
     copy.addClass('fadeInRight animated');
     
     // on lui enlever la classe pour la rendre visible
     copy.removeClass('d-none');
+
+    // on rajoute un nombre à liste pour diférrencier pour le moment
+    copy.find('.card-title').append(document.createTextNode(++count));
     
     //on l'insert avant la div caché
-    copy.insertBefore($('div.d-none'));
+    copy.insertBefore($('.card-deck>div.d-none'));
     
     /*****************************************************************************************
     *                                                                                       *
@@ -23,13 +61,20 @@ $("body").on( "click", 'span.ajouteList', function(event) {
     *                         .insertBefore($('div.d-none'));                                 *
     *                                                                                       *
     *****************************************************************************************/ 
- 
+    
     // on boucle pendant 1000ms
     setTimeout(() => {
-
+        
         // on enleve les class d'animation
         $('.animated').removeClass('fadeInRight animated slideInRight flipInX bounceIn fadeOutRight');
+
     }, 1000);
+
+    // on ajoute la nouvelle liste créer dans la variable globales drake_listes
+    drake_listes.containers.push(copy);
+
+    // on ajoute la nouvelle zone de tache créer dans la variable globales drake_taches
+    drake_taches.containers.push(copy.find('ul.drake_taches'));
 });
 
 // on ecoute dans body le click sur la div removeList de suppression de la liste
@@ -130,10 +175,10 @@ $("body").on( "click", "button.button-addon", function(event) {
         
         // on efface le message au bout de 3000ms (3s)
         setTimeout(() => {
-
+            
             // on enleve le message
             divMess.remove();
-
+            
             // on enleve les class d'animation
             $('.animated').removeClass('fadeInRight animated slideInRight flipInX bounceIn fadeOutRight');
         }, 3000);
@@ -159,21 +204,21 @@ $("body").on("click", ".archive", function(event) {
     
     // si l'utilisateur confirme la suppression
     //if (confirm('Are you sure?') === true) {
-        
-        // on cherche l'ancètre li le plus proche en enlevant et ajoutznt des class d'animation
-        var li = $(this).closest('li').removeClass('animated flipInX').addClass('animated fadeOutRight'); 
-        
-        // on cherche l'ancètre ul 
-        var list = $(this).closest('ul');
-        
-        // on boucle sur 1000ms
-        setTimeout(() => {
-            // on efface la li
-            li.remove();
-            // on enleve les class d'animation
-            $('.animated').removeClass('fadeInRight animated slideInRight flipInX bounceIn fadeOutRight');
-        }, 1000);
-   // }
+    
+    // on cherche l'ancètre li le plus proche en enlevant et ajoutznt des class d'animation
+    var li = $(this).closest('li').removeClass('animated flipInX').addClass('animated fadeOutRight'); 
+    
+    // on cherche l'ancètre ul 
+    var list = $(this).closest('ul');
+    
+    // on boucle sur 1000ms
+    setTimeout(() => {
+        // on efface la li
+        li.remove();
+        // on enleve les class d'animation
+        $('.animated').removeClass('fadeInRight animated slideInRight flipInX bounceIn fadeOutRight');
+    }, 1000);
+    // }
 });
 
 // fonction pour fabriquer la span des fonts awesome
@@ -197,3 +242,4 @@ function createSpanFa( spanClassAdd,  faClassAdd,  FaAttr = null) {
     // on retourne la span construite
     return span.append(fa);
 }
+

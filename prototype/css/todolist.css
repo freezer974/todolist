@@ -14,10 +14,16 @@ span.removeList{
 div.scrollV {
     overflow-y: scroll;
     white-space: nowrap;
+    min-width: 18em;
+    max-width: 18em;
 }
 
 span, div.check {
     cursor: pointer;
+}
+
+.card-body {
+    cursor: move;
 }
 
 div.check {
@@ -31,8 +37,6 @@ div.scrollH {
 }
 
 .card-block {
-    min-width: 18em;
-    max-width: 18em;
     background-color: rgba(255,255,255, 0.9) !important;
     font-size: .85em !important;
 }
