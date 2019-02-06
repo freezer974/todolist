@@ -3,19 +3,23 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-    background-image: url('../img/fond-ecran-15151.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    font-family: 'Numans', sans-serif;
+    
 }
 
 .card{
-    height: 370px;
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
     background-color: rgba(0,78,88, 0.2) !important;
+}
+
+.card-profil{
+    height: auto;
+    width: 600px;
+}
+
+.img-profil{
+    
 }
 
 .social_icon span{
@@ -81,4 +85,12 @@ input:focus{
 
 .links a{
     margin-left: 4px;
+}
+
+main{
+    background-image: url('../img/fond-ecran-15151.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Numans', sans-serif;
+    background-origin: content;
 }
